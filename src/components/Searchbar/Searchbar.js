@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Search, Grid, Menu, Container, Popup } from 'semantic-ui-react'
 import './Searchbar.css';
 import { ADDONS_REPO, CATEGORIES } from '../../constants';
-
+import { connect } from "react-redux";
 
 const initialState = {
     loading: false,
@@ -26,8 +26,8 @@ function exampleReducer(state, action) {
     }
 }
 
-function Searchbar() {
-
+function Searchbar({addons}) {
+console.log("ADDOS: ", addons)
     let [searchFocus, setSearchFocus] = useState(false);
     let [activeItem, setActiveItem] = useState('home')
     const [state, dispatch] = React.useReducer(exampleReducer, initialState)
@@ -44,10 +44,9 @@ function Searchbar() {
                 dispatch({ type: 'CLEAN_QUERY' })
                 return
             }
-            console.log("source.filter(item=>item.title === data.value): ", ADDONS_REPO.filter(item => item.title.indexOf(data.value) > -1))
             dispatch({
                 type: 'FINISH_SEARCH',
-                results: ADDONS_REPO.filter(item => item.title.indexOf(data.value) > -1 || item.category.indexOf(data.value) > -1),
+                results: addons.filter(item => item.title.indexOf(data.value) > -1 || item.category.indexOf(data.value) > -1),
             });
             setSearchFocus(true)
         }, 300)
@@ -107,5 +106,12 @@ function Searchbar() {
         </div>
     )
 }
-
-export default Searchbar;
+const mapStateToProps = (state) => {
+    const { addons, loading } = state['addons'];
+    
+console.log("ADDONS: ", addons)
+    return {
+      addons: addons,  
+    };
+  };
+export default connect(mapStateToProps)(Searchbar);

@@ -12,9 +12,6 @@ const initialState = {
 };
 
 export default function addons(state = initialState, action) {
-    console.log("ACTION: ", action);
-    console.log("state: ", state);
-
     switch (action.type) {
         case GET_ADDONS_STARTED:
             return {
@@ -28,7 +25,6 @@ export default function addons(state = initialState, action) {
                 loading: false,
                 error: null,
                 addons: [].concat.apply([], action.payload.data.map(categories => {
-                    console.log("addons: ", categories)
                     return categories['data'].map(item => {
                         return {
                             title: item.title,
