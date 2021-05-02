@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Search, Grid, Menu, Container } from 'semantic-ui-react'
+import { Search, Grid, Menu, Container, Popup } from 'semantic-ui-react'
 import './Searchbar.css';
 import { ADDONS_REPO, CATEGORIES } from '../../constants';
 
@@ -82,18 +82,23 @@ function Searchbar() {
                     <Grid.Column width={8}>
                         <Menu secondary>
                             {CATEGORIES.map((category) =>
-                                <Menu.Item
-                                    name={category.name}
-                                    active={activeItem === category.id}
-                                    onClick={(e) => {
-                                        setActiveItem(category.id);
-                                        dispatch({ type: 'UPDATE_SELECTION', selection: category.id });
-                                        const data = {
-                                            value: category.id
-                                        }
-                                        handleSearchChange(e, data);
-                                    }}
-                                />)
+
+                                <Popup
+                                    content={category.description}
+                                    position='bottom center'
+                                    trigger={<Menu.Item
+                                        name={category.name}
+                                        active={activeItem === category.name}
+                                        onClick={(e) => {
+                                            setActiveItem(category.name);
+                                            dispatch({ type: 'UPDATE_SELECTION', selection: category.name });
+                                            const data = {
+                                                value: category.name
+                                            }
+                                            handleSearchChange(e, data);
+                                        }}
+                                    />} />
+                            )
                             }
                         </Menu>
                     </Grid.Column>
