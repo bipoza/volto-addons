@@ -12,6 +12,10 @@ export const CATEGORIES = [{
     name: "Widgets",
     description:"Input components, to be reused in the form library",
     slug: "widgets"
+},{
+    name: "Various",
+    description:"Various addons that can't fit in a specific category",
+    slug: "various"
 }];
 
 
