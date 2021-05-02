@@ -1,22 +1,30 @@
+export const API_ENDPOINT = "https://github.com/collective/awesome-volto";
+export const AWESOME_VOLTO_MD_ENDPOINT = "https://raw.githubusercontent.com/collective/awesome-volto/master/README.md";
+export const DB_KEYS = {
+    ADDONS: 'addons'
+}
 export const CATEGORIES = [{
     name: "Rich text editing",
-    description:"Enhance the basic text editing experience",
+    description: "Enhance the basic text editing experience",
     slug: "rich-text-editing"
 },
 {
     name: "Layout addons",
-    description:"Enhancements to the way blocks can be used, to create custom layouts",
+    description: "Enhancements to the way blocks can be used, to create custom layouts",
     slug: "layout-addons"
 },
 {
     name: "Widgets",
-    description:"Input components, to be reused in the form library",
+    description: "Input components, to be reused in the form library",
     slug: "widgets"
-},{
-    name: "Various",
-    description:"Various addons that can't fit in a specific category",
-    slug: "various"
-}];
+}
+// , {
+//     name: "Various",
+//     description: "Various addons that can't fit in a specific category",
+//     slug: "various"
+// }
+
+];
 
 
 export const ADDONS_REPO = [{
