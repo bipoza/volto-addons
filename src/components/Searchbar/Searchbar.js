@@ -46,7 +46,7 @@ console.log("ADDOS: ", addons)
             }
             dispatch({
                 type: 'FINISH_SEARCH',
-                results: addons.filter(item => item.title.indexOf(data.value) > -1 || item.category.indexOf(data.value) > -1),
+                results: addons?.filter(item => item.title.indexOf(data.value) > -1 || item.category.indexOf(data.value) > -1),
             });
             setSearchFocus(true)
         }, 300)
