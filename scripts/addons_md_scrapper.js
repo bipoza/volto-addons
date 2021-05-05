@@ -28,11 +28,8 @@ function scrapeMarkdownToJson(readme_data) {
         let from_index = result.findIndex(x => x.content === TAKE_README_PIECE.from);
         let to_index = result.findIndex(x => x.content === TAKE_README_PIECE.to);
         result = result.slice(from_index, to_index).filter((x) => x.level === 1 || x.level === 3);
-        console.log("Result: ", result);
-
         let category_count = 0;
         for (let i = 0; i < result.length; i++) {
-            console.log("result: ", result[i])
             if (result[i].level === 1) {
                 let category = {
                     title: result[i]?.content,
@@ -52,7 +49,6 @@ function scrapeMarkdownToJson(readme_data) {
                 addons[category_count - 1].data.push(addon_info)
             }
         };
-        console.log("ADDONS: ", addons);
         resolve(addons);
     });
 
