@@ -2,7 +2,7 @@
   "name": "volto-addons-scripts",
   "version": "1.0.0",
   "description": "Scripts to generate json cache",
-  "main": "index.js",
+  "main": "cache_generator.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "generate-cache":"node cache_generator.js"
