@@ -1,5 +1,9 @@
-# Getting Started with Create React App
+# (WIP)  Volto community addons gallery
 
+## DEMO: https://bipoza.github.io/volto-addons/
+
+
+# React scripts
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
