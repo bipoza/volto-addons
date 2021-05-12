@@ -10,6 +10,7 @@ const TAKE_README_PIECE = {
 export default function getAwesomeVoltoToJSON() {
     return new Promise((resolve, reject) => {
         axios.get(AWESOME_VOLTO_MD_ENDPOINT).then(async res => {
+            console.log("RES: ", res)
             resolve(await scrapeMarkdownToJson(res.data))
         }).catch(err => {
             reject(err.message);

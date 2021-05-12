@@ -35,7 +35,8 @@ console.log("ADDOS: ", addons)
 
     const timeoutRef = React.useRef()
     const handleSearchChange = React.useCallback((e, data) => {
-        console.log()
+        // console.log("state: ", addons?.filter(item => item.title.indexOf("volto") > -1 ))
+        console.log("INPUT: ", data.value)
         clearTimeout(timeoutRef.current)
         dispatch({ type: 'START_SEARCH', query: data.value })
 
@@ -46,11 +47,11 @@ console.log("ADDOS: ", addons)
             }
             dispatch({
                 type: 'FINISH_SEARCH',
-                results: addons?.filter(item => item.title.indexOf(data.value) > -1 || item.category.indexOf(data.value) > -1),
+                results: addons?.filter(item => (item.title.indexOf(data.value) > -1 )|| (item.category.indexOf(data.value) > -1))
             });
             setSearchFocus(true)
         }, 300)
-    }, [])
+    }, [addons])
     React.useEffect(() => {
         return () => {
             clearTimeout(timeoutRef.current)
@@ -81,7 +82,6 @@ console.log("ADDOS: ", addons)
                     <Grid.Column width={8}>
                         <Menu secondary>
                             {CATEGORIES.map((category) =>
-
                                 <Popup
                                     content={category.description}
                                     position='bottom center'

@@ -19,12 +19,12 @@ export default function addons(state = initialState, action) {
                 loading: true
             };
         case GET_ADDONS_SUCCESS:
-            console.log(action)
+            console.log("Action: ", action)
             return {
                 ...state,
                 loading: false,
                 error: null,
-                addons: [].concat.apply([], action.payload.data.map(categories => {
+                addons: [].concat.apply([], action.payload.data['data'].map(categories => {
                     return categories['data'].map(item => {
                         return {
                             title: item.title,
@@ -34,12 +34,13 @@ export default function addons(state = initialState, action) {
                         }
                     })
                 })),
-                categories: [].concat.apply([], action.payload.data.map(item => {
+                categories: [].concat.apply([], action.payload.data['data'].map(item => {
                     return {
                         title: item.title,
                         description: item.description
                     }
-                }))
+                })),
+                last_update:  action.payload.data['last_update'],
             };
         case GET_ADDONS_FAILURE:
             return {

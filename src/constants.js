@@ -1,5 +1,6 @@
 export const API_ENDPOINT = "https://github.com/collective/awesome-volto";
 export const AWESOME_VOLTO_MD_ENDPOINT = "https://raw.githubusercontent.com/collective/awesome-volto/master/README.md";
+export const CACHE_ENDPOINT = "https://raw.githubusercontent.com/bipoza/volto-addons/main/cache/cache.json";
 export const DB_KEYS = {
     ADDONS: 'addons'
 }
