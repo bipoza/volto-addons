@@ -5,8 +5,11 @@
   "main": "cache_generator.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "generate-cache":"node cache_generator.js"
+    "generate-cache": "node cache_generator.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "simple-git": "^2.38.1"
+  }
 }
