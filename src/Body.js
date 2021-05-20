@@ -11,7 +11,7 @@ function Body({ categories, addons }) {
         <Searchbar />
         <Container style={{ marginTop: '2em' }}>
             {categories.map(category => {
-                return (<Carousel title={category.title} description={category.description} elements={addons.filter(item => item.category === category.title)}></Carousel>)
+                return (<Carousel title={category.title} description={category.description} elements={addons.filter(item => item.category === category.title).reverse()}></Carousel>)
             })}
         </Container>
     </>);

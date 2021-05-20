@@ -33,14 +33,15 @@ const CardCarousel = ({ title, description, elements }) => {
             {
                 elements.map((element, index) => (
                     <div className="carousel-padding">
-                        <Card>
-                            <Card.Content header={element.title} />
-                            {
-                                element.description &&
-                                <Card.Content description={element.description} />
-                            }
-
-                        </Card>
+                        <a href={element.url} target="_blank" rel="noreferrer">
+                            <Card>
+                                <Card.Content header={element.title} />
+                                {
+                                    element.description &&
+                                    <Card.Content description={element.description} />
+                                }
+                            </Card>
+                        </a>
                     </div>
                 )
                 )}

@@ -65,9 +65,10 @@ function Searchbar({ addons }) {
                             size="large"
                             className="search-bar"
                             loading={loading}
-                            onResultSelect={(e, data) =>
-                                dispatch({ type: 'UPDATE_SELECTION', selection: data.result.title })
-                            }
+                            onResultSelect={(e, data) =>{
+                                dispatch({ type: 'UPDATE_SELECTION', selection: data.result.title });
+                                window.open(data.result.url, '_blank');
+                            }}
                             onSearchChange={handleSearchChange}
                             results={results}
                             value={value}
