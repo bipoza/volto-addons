@@ -1,2 +1,2 @@
-import Carousel from './Carousel';
-export default Carousel;
+import CardCarousel from './CardCarousel';
+export default CardCarousel;

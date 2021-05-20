@@ -1,11 +1,8 @@
-import React, { useRef } from 'react';
-import './Carousel.css';
-// import CoverCard from './CoverCard';
-import { Card, Icon } from 'semantic-ui-react'
+import React from 'react';
+import './CardCarousel.css';
+import { Card } from 'semantic-ui-react'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-
-
 
 const CardCarousel = ({ title, description, elements }) => {
     const responsive = {
