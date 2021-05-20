@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/volto-addons/static/css/main.3a57276f.chunk.css",
-    "main.js": "/volto-addons/static/js/main.efbb568c.chunk.js",
-    "main.js.map": "/volto-addons/static/js/main.efbb568c.chunk.js.map",
+    "main.css": "/volto-addons/static/css/main.431d4aaa.chunk.css",
+    "main.js": "/volto-addons/static/js/main.28ed35c9.chunk.js",
+    "main.js.map": "/volto-addons/static/js/main.28ed35c9.chunk.js.map",
     "runtime-main.js": "/volto-addons/static/js/runtime-main.b9349eb4.js",
     "runtime-main.js.map": "/volto-addons/static/js/runtime-main.b9349eb4.js.map",
     "static/css/2.fca61c4b.chunk.css": "/volto-addons/static/css/2.fca61c4b.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.add7b872.chunk.js.map": "/volto-addons/static/js/3.add7b872.chunk.js.map",
     "index.html": "/volto-addons/index.html",
     "static/css/2.fca61c4b.chunk.css.map": "/volto-addons/static/css/2.fca61c4b.chunk.css.map",
-    "static/css/main.3a57276f.chunk.css.map": "/volto-addons/static/css/main.3a57276f.chunk.css.map",
+    "static/css/main.431d4aaa.chunk.css.map": "/volto-addons/static/css/main.431d4aaa.chunk.css.map",
     "static/js/2.791bb7a5.chunk.js.LICENSE.txt": "/volto-addons/static/js/2.791bb7a5.chunk.js.LICENSE.txt",
     "static/media/semantic.min.css": "/volto-addons/static/media/outline-icons.ddae9b1b.woff",
     "static/media/logo.b1e054e2.svg": "/volto-addons/static/media/logo.b1e054e2.svg",
@@ -23,7 +23,7 @@
     "static/js/runtime-main.b9349eb4.js",
     "static/css/2.fca61c4b.chunk.css",
     "static/js/2.791bb7a5.chunk.js",
-    "static/css/main.3a57276f.chunk.css",
-    "static/js/main.efbb568c.chunk.js"
+    "static/css/main.431d4aaa.chunk.css",
+    "static/js/main.28ed35c9.chunk.js"
   ]
 }
