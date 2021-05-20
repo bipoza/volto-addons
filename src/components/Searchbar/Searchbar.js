@@ -107,7 +107,7 @@ console.log("ADDOS: ", addons)
     )
 }
 const mapStateToProps = (state) => {
-    const { addons, loading } = state['addons'];
+    const { addons, loading } = state['data'];
     
 console.log("ADDONS: ", addons)
     return {

@@ -1,5 +1,5 @@
 
 import { combineReducers } from "redux";
-import addons from "./addons";
+import data from "./data";
 
-export default combineReducers({ addons });
+export default combineReducers({ data });

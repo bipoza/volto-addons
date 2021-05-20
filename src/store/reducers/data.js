@@ -6,7 +6,7 @@ import {
 
 const initialState = {
     loading: false,
-    all_addons: [],
+    addons: [],
     categories: [],
     error: null
 };

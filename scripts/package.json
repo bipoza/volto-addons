@@ -5,7 +5,7 @@
   "main": "cache_generator.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "generate-cache": "node cache_generator.js"
+    "generate-cache": "node index.js"
   },
   "author": "",
   "license": "ISC",
