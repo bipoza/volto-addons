@@ -21,7 +21,7 @@ const CardCarousel = ({ title, description, elements }) => {
         },
         mobile: {
             breakpoint: { max: 464, min: 0 },
-            items: 1
+            items: 2
         }
     };
 
@@ -29,7 +29,11 @@ const CardCarousel = ({ title, description, elements }) => {
     return (<>
         <h2>{title}</h2>
         <h3>{description}</h3>
-        <Carousel responsive={responsive}>
+        <Carousel responsive={responsive}
+        swipeable={true}
+        draggable={true}
+        dotListClass="custom-dot-list-style"
+        showDots={true}>
             {
                 elements.map((element, index) => (
                     <div className="carousel-padding">

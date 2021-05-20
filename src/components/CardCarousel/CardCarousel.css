@@ -1,3 +1,18 @@
 .carousel-padding{
   padding: 20px;
 }
+
+.custom-dot-list-style li button{
+  background-color: #FBFBFB;
+  border: 2px solid #D4D4D4;
+}
+
+.custom-dot-list-style li button:hover{
+  background-color: #D4D4D4;
+  border: 2px solid #D4D4D4;
+}
+
+.custom-dot-list-style li.react-multi-carousel-dot--active button{
+  background-color: #D4D4D4;
+  border: 2px solid #D4D4D4;
+}
