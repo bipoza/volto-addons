@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/volto-addons/static/css/main.3a57276f.chunk.css",
-    "main.js": "/volto-addons/static/js/main.29827973.chunk.js",
-    "main.js.map": "/volto-addons/static/js/main.29827973.chunk.js.map",
+    "main.js": "/volto-addons/static/js/main.efbb568c.chunk.js",
+    "main.js.map": "/volto-addons/static/js/main.efbb568c.chunk.js.map",
     "runtime-main.js": "/volto-addons/static/js/runtime-main.b9349eb4.js",
     "runtime-main.js.map": "/volto-addons/static/js/runtime-main.b9349eb4.js.map",
     "static/css/2.fca61c4b.chunk.css": "/volto-addons/static/css/2.fca61c4b.chunk.css",
@@ -24,6 +24,6 @@
     "static/css/2.fca61c4b.chunk.css",
     "static/js/2.791bb7a5.chunk.js",
     "static/css/main.3a57276f.chunk.css",
-    "static/js/main.29827973.chunk.js"
+    "static/js/main.efbb568c.chunk.js"
   ]
 }
