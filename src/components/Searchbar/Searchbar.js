@@ -26,8 +26,8 @@ function exampleReducer(state, action) {
     }
 }
 
-function Searchbar({addons}) {
-console.log("ADDOS: ", addons)
+function Searchbar({ addons }) {
+    console.log("ADDOS: ", addons)
     let [searchFocus, setSearchFocus] = useState(false);
     let [activeItem, setActiveItem] = useState('home')
     const [state, dispatch] = React.useReducer(exampleReducer, initialState)
@@ -35,8 +35,6 @@ console.log("ADDOS: ", addons)
 
     const timeoutRef = React.useRef()
     const handleSearchChange = React.useCallback((e, data) => {
-        // console.log("state: ", addons?.filter(item => item.title.indexOf("volto") > -1 ))
-        console.log("INPUT: ", data.value)
         clearTimeout(timeoutRef.current)
         dispatch({ type: 'START_SEARCH', query: data.value })
 
@@ -47,7 +45,7 @@ console.log("ADDOS: ", addons)
             }
             dispatch({
                 type: 'FINISH_SEARCH',
-                results: addons?.filter(item => (item.title.indexOf(data.value) > -1 )|| (item.category.indexOf(data.value) > -1))
+                results: addons?.filter(item => (item.title.indexOf(data.value) > -1) || (item.category.indexOf(data.value) > -1))
             });
             setSearchFocus(true)
         }, 300)
@@ -107,11 +105,9 @@ console.log("ADDOS: ", addons)
     )
 }
 const mapStateToProps = (state) => {
-    const { addons, loading } = state['data'];
-    
-console.log("ADDONS: ", addons)
+    const { addons } = state['data'];
     return {
-      addons: addons,  
+        addons: addons,
     };
-  };
+};
 export default connect(mapStateToProps)(Searchbar);
